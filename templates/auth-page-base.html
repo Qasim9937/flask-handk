@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>{% block title %}{% endblock %}</title>
+    
 </head>
 <body>
-    {% include 'navbar.html' %}
-    <h1>Login</h1>
-    <p><b>Welcome</b></b></p>
-
-    {% include 'footer.html' %}
+    {% block content %}{% endblock %}
 </body>
 </html>

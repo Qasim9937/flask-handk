@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-<link rel="stylesheet" href="{{url_for('static', filename='styles/index.css')}}">
-</head>
-<body>
-    <h1>Welcome home</h1>
-    <h2>This is your first Flask Application</h2>
+    
+    
+    {% extends 'base.html' %}
 
-    <a href="{{url_for('routes.signup')}}"><button>Sign Up</button></a>
-    <a href="{{url_for('routes.login')}}"><button>Login</button></a>
-</body>
-</html>
+    {% block title %}Homepage{% endblock %}
+
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
+
+    {% block content %}
+        <h1>Welcome home</h1>
+        <h2>This is your first Flask Application</h2>
+
+        <a href="{{url_for('routes.signup')}}"><button>Sign Up</button></a>
+        <a href="{{url_for('routes.login')}}"><button>Login</button></a>
+    {% endblock %}
+    
+    {% block footer %}
+        {% include 'footer.html' %}
+    {% endblock %}

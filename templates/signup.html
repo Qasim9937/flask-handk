@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    
-</head>
-<body>
+{% extends 'auth-page-base.html' %}
+
+
+{% block title %}Sign up {% endblock %}
+
+{% block content %}
     <h1>Sign up</h1>
     <form action="/signup" method="POST">
         <label for='fname'>First name:</label>
@@ -22,7 +19,6 @@
         <input id="password" type="password" name='password' required>
 
         <button type="submit">Submit</button>
-    
+
     </form>
-</body>
-</html>
+{% endblock %}
