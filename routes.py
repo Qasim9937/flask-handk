@@ -27,6 +27,22 @@ def signup():
         password = request.form['password']
         return redirect(url_for('home'))
 
+@routes_blueprint.route('/about')
+def about():
+    return render_template('about.html')
+
+@routes_blueprint.route('/skills')
+def skills():
+    return render_template('skills.html')
+
+@routes_blueprint.route('/project')
+def project():
+    return render_template('project.html')
+
+@routes_blueprint.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @routes_blueprint.app_errorhandler(404)
 def page_404(error):
     return render_template('404.html'), 404

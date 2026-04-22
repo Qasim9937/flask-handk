@@ -1,2 +1,24 @@
-<h2>Navbar</h2>
-<hr>
+<style>
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #9397e6;
+        border-bottom: 1px solid #dee2e6;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .nav-link {
+        text-decoration: none;
+        color: #333;
+        margin: 0 1rem;
+    }
+</style>
+
+<nav>
+    <a class="nav-link" href="{{ url_for('routes.home') }}">Home</a>
+    <a class="nav-link" href="{{ url_for('routes.about') }}">About</a>
+    <a class="nav-link" href="{{ url_for('routes.skills') }}">Skills</a>
+    <a class="nav-link" href="{{ url_for('routes.project') }}">Project</a>
+    <a class="nav-link" href="{{ url_for('routes.contact') }}">Contact</a>
+</nav>
